@@ -1,3 +1,305 @@
-section {
+/*******************************************************************************
+// * selector
+//
+/// It is a good practice to avoid the * selector in general. However, some 
+/// properties like box-sizing are not inherited(unfortunatley, why??). The
+/// default specification of width and height is to constrain just content of 
+/// the box. Since, HTML/CSS follows a box-model it is important for the layout
+/// algorithm to know the size of the box. This includes, by default, the height
+/// and width of the box is determined by the height and width of the content,
+/// the padding and the border size. All modern frameworks do not use this 
+/// sizing model. Instead the sizing model includes the size of content,
+/// padding and border. To enforce this sizing model, we need to set the 
+/// box-sizing of every HTML element to border-box.
+*******************************************************************************/
+* {
+	box-sizing: border-box;
+}
+/*******************************************************************************
+// selector body
+//
+/// CSS Selector for body element specifies some of the global properties of the
+/// page presentation and is "inherited" by all descendants unless a selector
+/// with more specifity overrides it. By default the width and height specified
+/// includes content on which the padding is added.
+*******************************************************************************/
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif; 
+}
+/*******************************************************************************
+// selector h1
+//
+/// Defines some of the presentation charcteristics of our title - Should give
+/// the same background color so that we can actually see it distinctively.
+*******************************************************************************/
+h1 {
+	padding:3%;
+	margin:0%;
+    text-align:center;
+}
+/*******************************************************************************
+// class content_box
+//
+/// The menu has three items and each item must have a div inside a section and 
+/// this selector applies to the div item only.
+*******************************************************************************/
+.content_box {
 	background-color: grey;
+	position: relative; /* This is needed so that the title can use absolute */
+	margin-top: 0px;
+	margin-bottom:5px;
+	margin-top:5px;
+	border:1px solid black;
+	height: 100px;
+}
+/*******************************************************************************
+// content_heading
+//
+/// This defines size of the content heading and the location. Right justified
+/// box and center justified text
+/// Requirement #12
+*******************************************************************************/
+.content_heading {
+	width:150px; /* Specifying in terms of pixels - should be proportional?*/
+	margin:0%;
+	padding:0%;
+	position: absolute;
+	top:0px;
+	right:0px;
+	text-align:center;
+	border-left:1px solid black;
+	border-bottom:1px solid black;
+}
+/*******************************************************************************
+// content_description
+//
+/// This defines the layout specific of the description or the text. We need to 
+/// ensure that the text does not collide with the heading
+/// Requirement #13
+/// On the Horizontal direction we try and specify everything as % to help with
+/// the scaling as we decrease or increase sizes
+*******************************************************************************/
+.content_desc {
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*******************************************************************************
+// class row
+//
+/// row specifies that the HTML element will make use of the entire width that
+/// is available to it.
+*******************************************************************************/
+.row {
+	width: 100%;
+	height: 100%;
+}
+/*******************************************************************************
+// class pink, red, yellow
+//
+/// Predefined clor classes
+*******************************************************************************/
+.pink {
+	background-color: pink;
+}
+.red {
+	background-color: red;
+}
+.yellow {
+	background-color: yellow;
+}
+
+
+/*******************************************************************************
+// media query for desktop devices
+//
+/// Specify CSS classes that will be defined only for browser sizes larger than
+/// or equal to 992px
+/// The standard based on twitter bootstrap grid) is to divide the screen size
+/// into 12 equal parts. This is done irrespective of the device size
+/// Requirement #9
+*******************************************************************************/
+@media (min-width: 992px) {
+	.col-lg-1,
+	.col-lg-2,
+	.col-lg-3,
+	.col-lg-4,
+	.col-lg-5,
+	.col-lg-6,
+	.col-lg-7,
+	.col-lg-8,
+	.col-lg-9,
+	.col-lg-10,
+	.col-lg-11,
+	.col-lg-12 {
+		margin: 0.5%;
+		float: left;
+		background-color: grey;
+		border: 1px solid black; /* Should border property be embedded here*/
+	}
+	.col-lg-1 {
+		width: 7.33%;
+	}
+    .col-lg-2 {
+		width: 15.66%;
+	}
+	.col-lg-3 {
+		width: 24%;
+	}
+	.col-lg-4 {
+		width: 32.33%;
+	}
+	.col-lg-5 {
+		width: 40.66%;
+	}
+	.col-lg-6 {
+		width: 49.00%;
+	}
+	.col-lg-7 {
+		width: 57.33%;
+	}
+    .col-lg-8 {
+		width: 65.66%;
+	}
+	.col-lg-9 {
+		width: 74%;
+	}
+	.col-lg-10 {
+		width: 82.33%;
+	}
+	.col-lg-11 {
+		width: 90.66%;
+	}
+	.col-lg-12 {
+		width: 99.00%;
+	}
+} /* End of class definitions for large devices */
+/*******************************************************************************
+// media query for tablet devices
+//
+/// Specify CSS classes that will be defined only for browser sizes larger 
+/// between 768px and 991mx
+/// The standard based on twitter bootstrap grid) is to divide the screen size
+/// into 12 equal parts. This is done irrespective of the device size
+/// Requirement #10
+*******************************************************************************/
+@media (min-width: 768px) and (max-width:991px) {
+	.col-md-1,
+	.col-md-2,
+	.col-md-3,
+	.col-md-4,
+	.col-md-5,
+	.col-md-6,
+	.col-md-7,
+	.col-md-8,
+	.col-md-9,
+	.col-md-10,
+	.col-md-11,
+	.col-md-12 {
+		margin: 0.5%;
+		float: left;
+		background-color: grey;
+		border: 1px solid black; /* Should border property be embedded here*/
+	}
+	.col-md-1 {
+		width: 7.33%;
+	}
+    .col-md-2 {
+		width: 15.66%;
+	}
+	.col-md-3 {
+		width: 24%;
+	}
+	.col-md-4 {
+		width: 32.33%;
+	}
+	.col-md-5 {
+		width: 40.66%;
+	}
+	.col-md-6 {
+		width: 49.00%;
+	}
+	.col-md-7 {
+		width: 57.33%;
+	}
+    .col-md-8 {
+		width: 65.66%;
+	}
+	.col-md-9 {
+		width: 74%;
+	}
+	.col-md-10 {
+		width: 82.33%;
+	}
+	.col-md-11 {
+		width: 90.66%;
+	}
+	.col-md-12 {
+		width: 99.00%;
+	}	
+} /* End of class definitions for tablet devices */
+/*******************************************************************************
+// media query for mobile devices
+//
+/// Specify CSS classes that will be defined only for browser sizes smaller 
+/// than 767px
+/// Requirement #11
+*******************************************************************************/
+@media (max-width: 767px)  {
+	.col-sm-1,
+	.col-sm-2,
+	.col-sm-3,
+	.col-sm-4,
+	.col-sm-5,
+	.col-sm-6,
+	.col-sm-7,
+	.col-sm-8,
+	.col-sm-9,
+	.col-sm-10,
+	.col-sm-11,
+	.col-sm-12 {
+		padding: 0%;
+		margin: 0.5%;
+		float: left;
+		background-color: grey;
+		border: 1px solid black; /* Should border property be embedded here*/
+	}
+	.col-sm-1 {
+		width: 7.33%;
+	}
+    .col-sm-2 {
+		width: 15.66%;
+	}
+	.col-sm-3 {
+		width: 24%;
+	}
+	.col-sm-4 {
+		width: 32.33%;
+	}
+	.col-sm-5 {
+		width: 40.66%;
+	}
+	.col-sm-6 {
+		width: 49.00%;
+	}
+	.col-sm-7 {
+		width: 57.33%;
+	}
+    .col-sm-8 {
+		width: 65.66%;
+	}
+	.col-sm-9 {
+		width: 74%;
+	}
+	.col-sm-10 {
+		width: 82.33%;
+	}
+	.col-sm-11 {
+		width: 90.66%;
+	}
+	.col-sm-12 {
+		width: 99.00%;
+	}
 }
