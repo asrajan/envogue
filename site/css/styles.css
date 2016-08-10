@@ -1,0 +1,210 @@
+/******************************************************************************
+// element body
+//
+/// Setup the general properties of the page.
+/// TODO :
+///    - background color needs to be lighter on the eyes
+///      to reflect the color of the producs better
+///    - A better ont family
+******************************************************************************/
+body{
+	/*letter-spacing:1px;*/
+	color:#827970;
+	font-size: 16px;
+	font-family:'Lora',sans-serif;
+	background-color: #61122f;
+}
+/*******************************************************************************
+// id header-nav
+//
+/// Twitter boot-strap provides all its customizations through a library of css
+/// classes. To ensure we would not clash with out, our specific customizations
+/// are provided using id. Id also has the added advantage of of providing href
+*******************************************************************************/
+#header-nav {
+	background-color:  #f6b319;
+	border-radius:0;
+	border: 0;
+	/*height: 110px;*/
+}
+/*******************************************************************************
+// id logo-img
+//
+/// Specify the brand logo to be displayed in the top left corner. We can refine
+/// refine the placement and the brand later. To enable fast loading of the web
+/// page ensure that the image size is not too big.
+********************************************************************************/
+#logo-img {
+  /* Relative paths are with respect to the location of this file    */
+  /* No repeat to indicate that the image should be placed only once */
+  background: url('../images/pillow-brand.jpg') no-repeat;
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  margin: 10px 15px 10px 0;
+}
+
+/*******************************************************************************
+// id navbar-brand
+//
+/// Brand is the brand name. In this case the brand name is Envogue. Provides
+/// some structure as to where this should be embedded. Having a padding of 25px.
+/// Not sure why the padding must be 25px.
+********************************************************************************/
+.navbar-brand {
+  padding-top: 20px;
+}
+/*******************************************************************************
+// id navbar-brand
+//
+/// The brand name is placed uder h1 because that may help with many search 
+/// engine optimizations. Thie line-height is not quite clear why we would 
+/// require this.
+********************************************************************************/
+.navbar-brand h1 { /* Envogue */
+  font-family: 'Lora', serif;
+  color: #557c3e;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+.navbar-brand p { /* Simple Elegance*/
+    color: #000;
+    text-transform: uppercase;
+    font-size: .7em;
+    font-style:italic;
+    margin-top: 15px;
+  }
+/*******************************************************************************
+// id nav-list
+//
+/// This is the anchor id that allows us to specify properties of all the menu 
+/// items. nav-list is the root whose descendants we wish to select. I am not
+/// sure why nav-list a span was really defined. 
+********************************************************************************/
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #951C49;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+/******************************************************************************
+// a span
+//
+/// This selects the font of the glyphicons. We make the icons biiger than the
+/// the text underneath them
+******************************************************************************/
+#nav-list a span {
+	font-size:1.8em;
+}
+#phone a { /* Phone number */
+  text-align: center;
+  /*padding-bottom: 0;*/
+}
+/******************************************************************************
+// a:hover a:focus pseudo selectors in the context of nav-brand
+//
+/// The default behaviour for most browsers is to make the link change color
+/// or underline it and we donot want that
+******************************************************************************/
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+.navbar-brand p { 
+  color: #000;
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { 
+  vertical-align: middle;
+}
+/******************************************************************************
+// Styling the button
+//
+/// Setting the color to be the same as the back ground for the margins
+******************************************************************************/
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #61122f;
+}
+/******************************************************************************
+// TODO : It is not clear what this really is??
+//
+///
+******************************************************************************/
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/*****************************************************************************
+// Media Queries
+//
+/// We will need more media queries to fine tune some of the layout and we 
+/// will continue to work on it. These break points are copied from
+/// bootstrap
+*****************************************************************************/
+@media (min-width : 1200px) {
+	.jumbotron {
+		background: url('../images/front-page-img.jpg');
+		background-size: cover;
+		height: 675px;
+		box-shadow: 0 0 50px #3F0C1F;
+		border: 2px solid #3F0C1F;
+	}
+
+}
+@media (min-width: 992px) and (max-width:1199px) {
+	#logo-img {
+      background: url('../images/pillow-brand.jpg') no-repeat;
+      background-size: cover;
+      width: 70px;
+      height: 70px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (max-width: 767px) {
+  .navbar-brand {
+    padding-top: 10px; /* Do not push things down too far */
+    height: 60px;      /* Simple Elegance text is very near*/
+  }
+  .navbar-brand h1 { 
+    font-size: 5vw; /* 1vw = 1% of view port width */
+    padding-top : 10px;
+  }
+  .navbar-brand p { 
+    font-size: .6em;
+    margin-top: 10px;
+  }
+  #collapsable-nav a {
+  	font-size: 1.2em;
+  }  
+  #collapsable-nav a span {
+  	font-size: 1em;
+  	margin-right:5px;
+  }
+  /****************************************************************************
+  * We need to do this because in the twitter boot strap had more specificity
+  * Than we wanted
+  ****************************************************************************/
+  .container .jumbotron {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #main-content {
+    border-radius: 0;
+  }
+}
+
+

@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Ahana Inc.</title>
+    <title>Envogue International | Premium Manufacturers of Bedding Products</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Goto google and verify the load time for the fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oxygen:400,300,700" rel="stylesheet" type="text/css">
+    <!-- Understand the font specification -->
+    <link href="https://fonts.googleapis.com/css?family=Garamond" rel="stylesheet" type="text/css">
+    <!-- Understand the font specification -->
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -16,21 +24,76 @@
     <![endif]-->
   </head>
   <body>
-    <div class="jumbotron text-center">
-      <h1>hAnA</h1>
-    </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 col-sm-6 text-center">
-          <p>Omni Channel Marketing &amp; Analytics</p>
+    <header>
+      <!-- We need to specify a nav bar at the top of the page    -->
+      <!-- hence we insert a nav element. We specify the class to -->
+      <!-- be a navbar and navbar-default, these are all          -->
+      <!-- components that are borrowed from twitter bootstrap    --> 
+      <nav id="header-nav" class="navbar navbar-default">
+        <!-- There is a difference between container vs container -->
+        <!-- fluid that we must experiment and find out what the  -->
+        <!-- difference is                                        -->
+        <div class="container">
+          <div class="navbar-header">
+            <!-- Pull left is twitter bootstrap for float left    -->
+            <!-- visible-md states that this elemen is visible    -->
+            <!-- ony for midsize breaks                           -->
+            <a href="index.html" class="pull-left visible-md visible-lg">
+              <!-- Need to find a good branding image here        -->
+              <div id="logo-img"></div>
+            </a>
+            <div class="navbar-brand">
+              <a href="index.html">
+                <h1>Envogue</h1>
+              </a>
+              <p>
+                <span>Simple Elegance</span>
+              </p>
+            </div>
+            <!-- navbar-toggle is a bootstrap class that specifies the    -->
+            <!-- look-n-feel of the button                                -->
+            <!-- collapsed is actually a bootstrap provided plugin and    -->
+            <!-- data-toggle and data-target are HTML5's way of providing -->
+            <!-- state to the JAVA plugin                                 -->
+            <!-- icon bar gives three bars in the toggle meny             -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div> <!-- End of navbar-header -->
+          <div id="collapsable-nav" class="collapse navbar-collapse">
+            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <li>
+                <a href="product-categories.html">
+                  <span class="glyphicon glyphicon-tags"></span><br class="hidden-xs"> Stuff</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> About</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-user"></span><br class="hidden-xs"> Log In</a>
+              </li>
+              <li id="phone" class="hidden-xs">
+                <a href="tel:410-602-5008">
+                  <span class="glyphicon glyphicon-phone-alt"></span><br>410-602-5008</a>
+              </li>
+            </ul><!-- #nav-list -->
+          </div><!-- .collapse .navbar-collapse -->
+
         </div>
-        <div class="col-md-4 col-sm-6 text-center">
-          <p>Workflow automation and efficiency</p>
-        </div>
-        <div class="col-md-4 col-sm-6 text-center">
-          <p>Supply chain and inventory</p>
-        </div>
-      </div>
+      </nav>
+    </header>
+    <div id="main-content" class="container">
+      <div class="jumbotron">
+         <!-- Back ground images do not scale with the size of the screen -->
+         <!-- We want something that will and bootstrap's img-reponsive   -->
+         <!-- Class really helps with that                                -->
+         <img src="images/front-page-img.jpg" alt="Envogue" class="img-responsive visible-xs">
+      </div>  
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

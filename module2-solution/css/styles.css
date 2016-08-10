@@ -303,3 +303,12 @@ h1 {
 		width: 99.00%;
 	}
 }
+
+/*******************************************************************************
+// Notes :
+/// - The Margin to the edges of the browser are not the same as the margin 
+///   between sections. I could not come up with a way such that as I add more
+///   sections it just work gracefully.
+///   There is a section on twitter bootstrap that talks about this and need
+///   to lookup that lecture. 
+*******************************************************************************/
