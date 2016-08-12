@@ -9,4 +9,4 @@
 ##         launched on which the refresh depends on
 ##
 ##########################################################################################
-browser-sync start --server --directory --files "**/*"
+browser-sync start --server --directory --files "**/*" 

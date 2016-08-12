@@ -66,8 +66,7 @@ body{
 ********************************************************************************/
 .navbar-brand h1 { /* Envogue */
   font-family: 'Lora', serif;
-  /*color: #557c3e;*/
-  color: #FFFFFF;
+  color: #557c3e;
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bold;
