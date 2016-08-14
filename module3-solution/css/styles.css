@@ -62,7 +62,6 @@ body{
 }
 #nav-list a {
   color: #FFFFFF;
-  text-align: center;
   background-color:#FF0000; 
 }
 #nav-list a:hover {
