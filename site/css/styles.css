@@ -46,6 +46,30 @@ body{
   height: 90px;
   margin: 10px 15px 10px 0;
 }
+/*******************************************************************************
+// id input-group
+//
+/// Specify the layout of the search box
+*******************************************************************************/
+/*
+#search-box {
+  width:300px;
+  margin:0px;
+  padding-top:30px;
+}
+
+#search-box button {
+  margin-left:0px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#search-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+*/
+
 
 /*******************************************************************************
 // id navbar-brand
@@ -205,6 +229,63 @@ body{
   background-color: #CA846B;
   color: #FFFFFF;
   opacity: .8;
+}
+/*****************************************************************************
+// Product Categories
+//
+/// Eventually these categorries must be dispatched from the data base with
+/// the same styling but different images
+*****************************************************************************/
+#product {
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  margin-bottom: 10px;
+  position: relative;  
+}
+#product span {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 2.0em;
+  font-style: bold;
+  position: absolute;
+  bottom:0;
+  width      : 100%;
+  text-align : center;  
+}
+#product1 {
+  background: url('../images/products/product-1.jpg') no-repeat;
+
+}
+#product1 span {
+}
+#product2 {
+  background: url('../images/products/product-2.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  margin-bottom: 10px;
+}
+#product3 {
+  background: url('../images/products/product-3.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  margin-bottom: 10px;
+}
+#product4 {
+  background: url('../images/products/product-4.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  margin-bottom: 10px;
+}
+#product5 {
+  background: url('../images/products/product-5.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  margin-bottom: 10px;
 }
 
 

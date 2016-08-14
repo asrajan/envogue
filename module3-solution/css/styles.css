@@ -1,0 +1,152 @@
+/******************************************************************************
+// element body
+//
+/// Setup the general properties of the page.
+/// TODO :
+///    - background color needs to be lighter on the eyes
+///      to reflect the color of the producs better
+///    - A better ont family
+******************************************************************************/
+body{
+	/*letter-spacing:1px;*/
+	color:#827970;
+	font-size: 16px;
+	font-family:sans-serif;
+	/* background-color: #61122f; */
+	background-color: #FFFFFF;
+
+}
+#header-nav {
+	background-color: #CA846B;
+	border-radius:0;
+	border: 0;
+}
+/*******************************************************************************
+// id navbar-brand
+//
+/// Brand is the brand name. In this case the brand name is Foof LLC. Provides
+/// some structure as to where this should be embedded. Having a padding of 25px.
+/// Not sure why the padding must be 25px.
+********************************************************************************/
+.navbar-brand {
+  padding-top: 20px;
+}
+/*******************************************************************************
+// id navbar-brand
+//
+/// The brand name is placed uder h1 because that may help with many search 
+/// engine optimizations. Thie line-height is not quite clear why we would 
+/// require this.
+********************************************************************************/
+.navbar-brand h1 {
+  font-family: sans-serif;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+/*******************************************************************************
+// id nav-list
+//
+/// This is the anchor id that allows us to specify properties of all the menu 
+/// items. nav-list is the root whose descendants we wish to select. I am not
+/// sure why nav-list a span was really defined. 
+********************************************************************************/
+#nav-list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#nav-list a {
+  color: #FFFFFF;
+  text-align: center;
+  background-color:#FF0000; 
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a {
+	font-size:1.2em;
+}
+/******************************************************************************
+// a:hover a:focus pseudo selectors in the context of nav-brand
+//
+/// The default behaviour for most browsers is to make the link change color
+/// or underline it and we donot want that
+******************************************************************************/
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+/******************************************************************************
+// Styling the button
+//
+/// Setting the color to be the same as the back ground for the margins
+******************************************************************************/
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #FFFFFF;
+}
+/******************************************************************************
+// TODO : It is not clear what this really is??
+//
+///
+******************************************************************************/
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/*
+* Requirement #9 : dropdown menu should have a different back ground color  
+*/
+/*#nav-list {
+  background-color:#008020;
+  padding:0;
+  margin:0;
+}*/
+
+#tiles a {
+  vertical-align: middle;
+  text-align: center;
+  color: #CA846B;  
+}
+
+#tiles a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#chicken-tile, #beef-tile, #sushi-tile {
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  position: relative;
+  border: 1px solid #CA846B;
+  overflow: hidden;
+  color:#FFFFFF;
+  background-color: #CA846B 
+}
+#tiles h2 {
+  width:100%;
+  text-align:center;
+}
+#tiles p {
+  margin:15px;
+}
+/*****************************************************************************
+// Media Queries
+//
+/// We will need more media queries to fine tune some of the layout and we 
+/// will continue to work on it. These break points are copied from
+/// bootstrap
+*****************************************************************************/
+@media (min-width : 1200px) {
+}
+@media (min-width: 992px) and (max-width:1199px) {
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+
+
