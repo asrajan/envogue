@@ -1,0 +1,9 @@
+Description : This file compiles a list of things that are still to be completed
+
+1. Toggle Button - This is outside Canvas which is the standard now for mobile devices
+- Implement outside canvas
+- Implement toggling when other parts of the page is selected
+
+2. Search Bar on the top needs to be designed well - Currently it clashes with the flow
+   in the navbar and probably not the best place to put it as things become smaller.
+    
